@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FGV - Sergio - Trabalho 2</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map-canvas { height: 100% }
+    </style>
+    <!--script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACWqi8W0xwyTX9_GUj2ktVe33PLoAuGz0&sensor=false">
+    </script-->
+	
+	<script type="text/javascript"
+		src="http://maps.googleapis.com/maps/api/js?key=AIzaSyACWqi8W0xwyTX9_GUj2ktVe33PLoAuGz0&libraries=visualization&sensor=false">
+	</script>
+	<script type="text/javascript"
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+	</script>
+	<script type="text/javascript"
+		src="cvs_to_array.js">
+	</script>
+	<script type="text/javascript"
+		src="index.js">
+	</script>
+	
+	<!-- 
+		GEOJson
+		https://github.com/JasonSanford/geojson-google-maps 
+	-->
+	<script type="text/javascript" src="GeoJSON.js"></script>
+		
+    <script type="text/javascript">
+
+	
+	</script>
+  </head>
+  <body>
+    <div>
+        <form name='user_control'>
+            <input type='button' id='btn_heatmap'  onclick='draw_map("heatmap_aglom")' value='Heatmap Aglom.'/>
+            <input type='button' id='btn_heatmap'  onclick='draw_map("heatmap_rsm2")' value='Heatmap R$/m^2'/>
+            <input type='button' id='btn_marker' onclick='draw_map("marker")' value='Markers' />
+            <input type='button' value='Limpar' onclick='delete_overlays'/>
+            <input type='button' value='Bairros Json' onclick='draw_limits("json")' />
+            <input type='button' value='Bairros KML' onclick='draw_limits("kml")' />
+        </form>
+    </div>
+    <div id="map-canvas"/>
+  </body>
+</html>
