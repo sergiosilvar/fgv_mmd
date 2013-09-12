@@ -1,2 +1,4 @@
 Livros
 .*
+aula*
+*.pyc
